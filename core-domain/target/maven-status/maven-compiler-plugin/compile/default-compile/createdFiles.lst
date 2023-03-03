@@ -1,0 +1,5 @@
+com\codersdungeon\service\impl\UtenteServiceImpl.class
+com\codersdungeon\service\interf\UtenteService.class
+com\codersdungeon\temp\FileItem.class
+com\codersdungeon\dto\FileItemDTO.class
+com\codersdungeon\temp\Utente.class
