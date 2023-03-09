@@ -1,0 +1,7 @@
+com\codersdungeon\dto\FileItemDTO.class
+com\codersdungeon\dto\ListFileItemDTO.class
+com\codersdungeon\service\impl\UtenteServiceImpl.class
+com\codersdungeon\service\interf\UtenteService.class
+com\codersdungeon\temp\FileItem.class
+com\codersdungeon\abstraction\AppInterface.class
+com\codersdungeon\temp\Utente.class
