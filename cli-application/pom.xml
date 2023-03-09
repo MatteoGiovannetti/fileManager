@@ -67,7 +67,7 @@
                             <archive>
                                 <manifest>
                                 <mainClass>
-                                    com.codersdungeon.Application
+                                    com.codersdungeon.Launcher
                                 </mainClass>
                                 </manifest>
                             </archive>

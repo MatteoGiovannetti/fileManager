@@ -1,33 +1,38 @@
 package com.codersdungeon;
 
+import com.codersdungeon.abstraction.AppInterface;
+import com.codersdungeon.dto.FileItemDTO;
+import com.codersdungeon.dto.ListFileItemDTO;
 import com.codersdungeon.service.impl.UtenteServiceImpl;
-import com.codersdungeon.temp.Utente;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.io.IOException;
 @Component
-public class Application {
-
-
-
+public class Application implements AppInterface {
     @Autowired
     UtenteServiceImpl utenteService;
 
-    public void findFilesInDirectory(String percorso){
+    public ListFileItemDTO findFilesInDirectory(String percorso){
         System.out.println("Questi sono i file nella cartella " + percorso);
-        System.out.println(utenteService.findAllFiles(percorso));
+        ListFileItemDTO result = utenteService.findAllFiles(percorso);
+        System.out.println(result.items.toString());
+        return result;
+
     }
 
-    public void findFilesSubDir(String percorso) {
+    public ListFileItemDTO findFilesSubDir(String percorso) {
         System.out.println("Questi sono i file nella cartella " + percorso + " e relative sottocartelle");
-        System.out.println(utenteService.findAllFiles(percorso));
+        ListFileItemDTO result = utenteService.findAllFiles(percorso);
+        System.out.println(result);
+        return result;
     }
 
-    public void copyItem(String filename, String directory, String destination){
-        utenteService.copyItem(filename, directory, destination);
+    public FileItemDTO copyItem(String filename, String directory, String destination){
+
 
         System.out.println("Il file " + filename + " è stato copiato in " + destination);
+
+        return utenteService.copyItem(filename, directory, destination);
     }
 
     public void deleteItem(String directory, String filename) {
@@ -35,10 +40,9 @@ public class Application {
 
         System.out.println("Il file " + filename + " è stato cancellato");
     }
-    public void backup(String directory, String destination) {
-        utenteService.backup(directory, destination);
-
-        System.out.println("Il contenuto di " + directory + " è stato copiato in " + destination);
+    public ListFileItemDTO backup(String destination) {
+      System.out.println("Il contenuto è stato copiato in " + destination);
+      return utenteService.backup(destination);
     }
 
 }

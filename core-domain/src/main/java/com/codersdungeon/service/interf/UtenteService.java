@@ -13,6 +13,6 @@ public interface UtenteService {
 
     void deleteItem(String directory, String filename);
 
-    ListFileItemDTO backup(String directory, String destination);
+    ListFileItemDTO backup(String destination);
 
 }
