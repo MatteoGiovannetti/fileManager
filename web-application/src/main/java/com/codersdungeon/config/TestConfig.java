@@ -1,13 +1,12 @@
 package com.codersdungeon.config;
 
 import com.codersdungeon.controller.ItemController;
-import com.codersdungeon.service.impl.UtenteServiceImpl;
-import org.springframework.context.annotation.ComponentScan;
+import com.codersdungeon.service.impl.ItemServiceImpl;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 
 @Configuration
-@Import({UtenteServiceImpl.class, ItemController.class})
+@Import({ItemServiceImpl.class, ItemController.class})
 public class TestConfig {
 
 }

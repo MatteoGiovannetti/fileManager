@@ -3,14 +3,14 @@ package com.codersdungeon;
 import com.codersdungeon.abstraction.AppInterface;
 import com.codersdungeon.dto.FileItemDTO;
 import com.codersdungeon.dto.ListFileItemDTO;
-import com.codersdungeon.service.impl.UtenteServiceImpl;
+import com.codersdungeon.service.impl.ItemServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
 public class Application implements AppInterface {
     @Autowired
-    UtenteServiceImpl utenteService;
+    ItemServiceImpl utenteService;
 
     public ListFileItemDTO findFilesInDirectory(String percorso){
         System.out.println("Questi sono i file nella cartella " + percorso);

@@ -1,7 +1,7 @@
 package com.codersdungeon.config;
 
 import com.codersdungeon.controller.ItemController;
-import com.codersdungeon.service.impl.UtenteServiceImpl;
+import com.codersdungeon.service.impl.ItemServiceImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -13,8 +13,8 @@ public class SpringConfig {
     */
 
     @Bean
-    public UtenteServiceImpl utenteService(){
-        return new UtenteServiceImpl();
+    public ItemServiceImpl utenteService(){
+        return new ItemServiceImpl();
     }
 
     @Bean

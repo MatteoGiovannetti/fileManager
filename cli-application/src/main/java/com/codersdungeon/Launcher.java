@@ -28,7 +28,7 @@ public class Launcher {
         Option list = new Option("all", "searchAll", true, "show the files from a folder");
         options.addOption(list);
 
-        Option subfolder = new Option("s", "subfolder", true, "search into subfolders");
+        Option subfolder = new Option("-s", "subfolder", true, "search into subfolders");
         options.addOption(subfolder);
 
         Option copy = new Option("copy", "copy", true, "copy a file from a directory to another");

@@ -3,7 +3,7 @@ package com.codersdungeon.controller;
 import com.codersdungeon.abstraction.AppInterface;
 import com.codersdungeon.dto.FileItemDTO;
 import com.codersdungeon.dto.ListFileItemDTO;
-import com.codersdungeon.service.impl.UtenteServiceImpl;
+import com.codersdungeon.service.impl.ItemServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -19,7 +19,7 @@ public class ItemController implements AppInterface {
     // al controller aggiungere metodo con mapping ad un url che chiama il servizio.
 
     @Autowired
-    UtenteServiceImpl utenteService;
+    ItemServiceImpl utenteService;
 
    /* @GetMapping ("/items/{percorso}")
     public ListFileItemDTO findAll(@PathVariable("percorso") String percorso) {
